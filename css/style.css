@@ -133,6 +133,9 @@ section {
 /*Sponsors page ends*/
 
 /*Contact page*/
+.contact-container {
+	margin-top: -50px !important;
+}
 
 .ymca {
 	border: 2px solid rgb(231, 141, 33) !important;
@@ -196,7 +199,7 @@ section {
 		font-size: 12px;
 	}
 	.contact-container {
-		margin-top: -150px !important;
+		margin-top: -350px !important;
 		width: 96% !important;
 	}
 	.map {
@@ -204,6 +207,7 @@ section {
 		text-align: left;
 		float: none;
 		transform: scale(1.5);
+		clear: both;
 	}
 	.address h5 {
 		font-size: 22px;

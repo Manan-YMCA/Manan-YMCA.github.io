@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-	gotoslide(8, 0);
-
 	document.querySelectorAll(".to-right").forEach(function(element) {
 		element.addEventListener("click", function() {
 			Reveal.right();
