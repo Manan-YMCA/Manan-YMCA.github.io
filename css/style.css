@@ -318,6 +318,10 @@ section {
 	text-align: right;
 	margin-right: 36px;
 	right: 0;
+	transform: translateY(-30px);
+}
+#ymcalogo {
+	transform: translateY(16px);
 }
 
 .nav > li {
@@ -340,6 +344,13 @@ section {
 	color: var(--orange);
 }
 
+#jcboselogo {
+	margin-left: 130px !important;
+	transform: translateY(-10px);
+}
+#back-arrow {
+	transition: all 0.3s;
+}
 .navbar-left {
 	float: left !important;
 	position: fixed;
@@ -350,11 +361,10 @@ section {
 	letter-spacing: 2px;
 	margin: 26px 48px;
 	cursor: pointer;
-	transition: all 0.3s;
 }
-.navbar-left:hover {
+#back-arrow:hover {
 	color: var(--orange);
-	transform: scale(1.2);
+	transform: translateY(10px) scale(1.2);
 	-webkit-transform: scale(1.2);
 }
 
@@ -393,6 +403,7 @@ section {
 		margin-left: 36px;
 		left: 0;
 		z-index: 0 !important;
+		transform: translateY(0);
 	}
 	.nav > .navbar-links > li {
 		display: inline-block;
@@ -414,6 +425,13 @@ section {
 		margin-top: 28px;
 		margin-left: 24px !important;
 		font-size: 20px;
+	}
+	#jcboselogo {
+		margin-left: 90px !important;
+		transform: translateY(-10px);
+	}
+	#ymcalogo {
+		display: none;
 	}
 }
 
