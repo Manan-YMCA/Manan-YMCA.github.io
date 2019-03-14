@@ -710,8 +710,7 @@ section {
 		margin-left: 5vw !important;
 	}
 	/*----------  about  ----------*/
-	.about-section {
-		width: 100% !important;
+	.about-section-content {
 		margin-top: calc(-25vh) !important;
 		padding: 0 40px !important;
 	}
