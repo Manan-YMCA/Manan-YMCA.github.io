@@ -421,6 +421,9 @@ section {
 		overflow: hidden;
 		transition: all 0.4s;
 	}
+	#navbar-links{
+		background-color: #0b3357;
+	}
 	.navbar-left {
 		margin-top: 28px;
 		margin-left: 24px !important;
