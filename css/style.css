@@ -48,12 +48,6 @@
 =            global            =
 =============================================*/
 
-#eclogo {
-	border: none !important;
-	background-color: transparent !important;
-	box-shadow: none !important;
-}
-
 section {
 	margin-left: calc(-5vw) !important;
 }
@@ -318,10 +312,11 @@ section {
 	text-align: right;
 	margin-right: 36px;
 	right: 0;
-	transform: translateY(-30px);
+	transform: translateY(-60px);
 }
 #ymcalogo {
-	transform: translateY(16px);
+	transform: translateY(30px);
+	height: 80px;
 }
 
 .nav > li {
@@ -345,8 +340,9 @@ section {
 }
 
 #jcboselogo {
-	margin-left: 130px !important;
-	transform: translateY(-10px);
+	margin-left: 100px !important;
+	transform: translateY(-25px);
+	height: 80px !important;
 }
 #back-arrow {
 	transition: all 0.3s;
@@ -417,7 +413,7 @@ section {
 		padding-left: 20px;
 		height: 0;
 		width: 101%;
-		background: transparent;
+		background: #0b3357 !important;
 		overflow: hidden;
 		transition: all 0.4s;
 	}
@@ -427,8 +423,9 @@ section {
 		font-size: 20px;
 	}
 	#jcboselogo {
-		margin-left: 90px !important;
+		margin-left: 80px !important;
 		transform: translateY(-10px);
+		height: 50px !important;
 	}
 	#ymcalogo {
 		display: none;
@@ -484,10 +481,22 @@ section {
 =            Coming soon slide            =
 =============================================*/
 
-.go-to-site,
+#eclogo {
+	border: none !important;
+	background-color: transparent !important;
+	box-shadow: none !important;
+	height: 250px;
+}
+.logo-subheading-p {
+	margin-top: -60px !important;
+	font-size: 24px !important;
+}
+
 .coming-soon {
 	font-family: HiraKakuStdN-W8;
 	text-transform: lowercase !important;
+	color: #d3d3d3 !important;
+	margin-top: 64px !important;
 }
 
 .go-to-site {
@@ -503,13 +512,31 @@ section {
 	border-color: var(--orange) !important;
 	background-color: rgba(0, 0, 0, 0);
 }
+.golden-jubilee-p {
+	font-size: 20px !important;
+	text-align: center !important;
+	position: relative;
+	top: 150px;
+	color: var(--orange);
+}
 
 @media screen and (max-width: 600px) {
+	#eclogo {
+		height: 350px;
+	}
 	.go-to-site {
 		font-size: 52px !important;
 	}
+	.logo-subheading-p {
+		margin-top: -60px !important;
+		font-size: 40px !important;
+	}
 	.coming-soon {
-		font-size: 90px !important;
+		font-size: 120px !important;
+	}
+	.golden-jubilee-p {
+		font-size: 40px !important;
+		top: 300px;
 	}
 }
 
