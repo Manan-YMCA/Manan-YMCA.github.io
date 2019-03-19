@@ -492,6 +492,7 @@ section {
 .logo-subheading-p {
 	margin-top: -60px !important;
 	font-size: 24px !important;
+	color: #d3d3d3;
 }
 
 .coming-soon {
@@ -519,7 +520,7 @@ section {
 	text-align: center !important;
 	position: relative;
 	top: 150px;
-	color: var(--orange);
+	color: #d3d3d3;
 }
 
 @media screen and (max-width: 600px) {
