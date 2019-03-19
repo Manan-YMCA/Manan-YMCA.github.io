@@ -22,11 +22,13 @@ var x = setInterval(function() {
 
 	// Output the result in an element with id="demo"
 	document.getElementById("pg").innerHTML =
-		days * 24 + ":" + minutes + ":" + seconds;
+		// days * 24 + ":" + minutes + ":" + seconds;
+		days + ":" + hours + ":" + minutes + ":" + seconds + " to go";
 
 	// If the count down is over, write some text
 	if (remaining < 0) {
 		clearInterval(x);
-		document.getElementById("pg").innerHTML = "coming any moment...";
+		document.getElementById("pg").innerHTML =
+			"<h2 class='coming-soon'>Coming Soon...</h2>";
 	}
 }, 1000);

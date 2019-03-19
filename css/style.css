@@ -501,6 +501,12 @@ section {
 	color: #d3d3d3 !important;
 	margin-top: 64px !important;
 }
+.timer {
+	font-family: HiraKakuStdN-W8;
+	text-transform: lowercase !important;
+	color: #d3d3d3 !important;
+	margin-top: 64px !important;
+}
 
 .go-to-site {
 	cursor: pointer;
@@ -510,11 +516,11 @@ section {
 	transition: all 0.2s;
 	font-size: 24px !important;
 }
-.go-to-site:hover {
+/* .go-to-site:hover {
 	color: var(--orange);
 	border-color: var(--orange) !important;
 	background-color: rgba(0, 0, 0, 0);
-}
+} */
 .golden-jubilee-p {
 	font-size: 20px !important;
 	text-align: center !important;
@@ -577,7 +583,7 @@ section {
 .about-p {
 	font-family: Helvetica;
 	font-size: 21px !important;
-	color: #f5a623;
+	color: white;
 	text-align: left !important;
 }
 
