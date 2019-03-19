@@ -316,7 +316,7 @@ section {
 }
 #ymcalogo {
 	transform: translateY(30px);
-	height: 80px;
+	height: 80px !important;
 }
 
 .nav > li {
@@ -413,12 +413,11 @@ section {
 		padding-left: 20px;
 		height: 0;
 		width: 101%;
-		background: #0b3357 !important;
 		overflow: hidden;
 		transition: all 0.4s;
 	}
-	#navbar-links{
-		background-color: #0b3357;
+	#navbar-links {
+		background-color: transparent;
 	}
 	.navbar-left {
 		margin-top: 28px;

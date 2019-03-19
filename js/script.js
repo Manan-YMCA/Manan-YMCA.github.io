@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		var navbar = document.getElementById("navbar-links");
 		if (navbar.style.height == "0px") {
 			navbar.style.height = "2000px";
-			navbar.style.backgroundColor = "#222";
+			navbar.style.backgroundColor = "#0B3357";
 		} else {
 			navbar.style.height = "0";
 			navbar.style.backgroundColor = "transparent";
