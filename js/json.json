@@ -1,0 +1,46 @@
+{
+	"name": "Mohit Yadav",
+	"phone": 9953884416,
+	"email": "mohityadav1921@gmail.com",
+	"college": "ymca",
+	"eventid": "5c9313b71038b40004cfd75a",
+	"eventname": "Insurrection",
+	"timestamp": 1554019637376,
+	"team": [
+		{
+			"name": "Mohit Yadav",
+			"email": "mohityadav1921@gmail.com"
+		}
+	]
+}
+
+{
+    "name": "mohit",
+    "phone": "9953884416",
+    "email": "mohit@mohit.com",
+    "college": "ymca",
+    "eventid": "5c98f9e7d848980004aa92be",
+    "eventname": "Android Development",
+    "timestamp": "1554028305974",
+    "team": '[
+        {
+            "name": "mohit"
+        }
+    ]'
+}
+
+{
+    name: "Mohit Yadav",
+    phone: 9953884416,
+    email: "mohityadav1921@gmail.com",
+    college: "ymca",
+    eventid: "5c9313b71038b40004cfd75a",
+    eventname: "Insurrection",
+    timestamp: 1554019637376,
+    team: [
+        {
+            name: "Mohit Yadav",
+            email: "mohityadav1921@gmail.com"
+        }
+    ]
+}

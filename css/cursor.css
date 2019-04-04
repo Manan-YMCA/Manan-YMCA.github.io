@@ -1,9 +1,10 @@
 body {
 	margin: 0;
-	/* cursor: none; */
 }
-a {
-	/* cursor: none; */
+body,
+a,
+input {
+	cursor: none;
 }
 
 /* The following code is for performance improvement of the cursor animation - Aakash*/

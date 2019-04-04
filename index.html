@@ -6,38 +6,63 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 		/>
-		<meta name="theme-color" content="#0b3357" />
+		<meta name="theme-color" content="#222" />
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
 		<title>Elements Culmyca '19</title>
 
 		<link rel="stylesheet" href="./css/reveal.css" />
 		<link rel="stylesheet" href="./css/theme/black.css" />
-		<link rel="stylesheet" href="./css/style.css" />
 		<link rel="stylesheet" href="./css/cursor.css" />
+		<link rel="stylesheet" href="./css/perfect-scrollbar.css">
+		<link rel="stylesheet" href="./css/owlcarousel/owl.carousel.min.css">
+		<link rel="stylesheet" href="./css/owlcarousel/owl.theme.default.min.css">
+		<link rel="stylesheet" href="./css/style.css" />
 		<script
 			src="https://code.jquery.com/jquery-3.3.1.min.js"
 			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			crossorigin="anonymous"
 		></script>
-		<link
+		<!-- <link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
-		/>
-		<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script>
+		/> -->
+		<script src="./js/perfectScrollbar/perfect-scrollbar.min.js"></script>
+		<!-- <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script> -->
+		<!-- <script src="./js/siema.min.js"></script> -->
+		<script src="./js/preload.js"></script>
+		<script src="./js/pre.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	</head>
 
 	<body>
+
+		<!-- Pre-Loader -->
+
+	<div class="loading"><span class="bla">The Annual Cultural and Technical Fest of JCBUST<br><br> <span class="count">0</span></span></div>
+	<div class="loader">
+		<hr class="line-1"><br>
+		<span class="ec">Welcome</span>
+		<span class="ec-x"><span class="elements-loader">Elements</span> Culmyca</span><br>
+		<hr class="line-2">
+	</div>
+	<div class="preloader-top">
+		<hr class="line-x">
+	</div>
+	<div class="preloader-bottom"></div>
+
+
+		<!-- loading gif -->
+		<div id="loading-gif-container-global">
+			<img id="loading-gif-image-global" style="display: none;" src="./images/loading.gif" alt="loading...">
+		</div>
+
 		<!-- The nav bar -->
-		<div class="nav">
-			<span class="navbar-left">
-				<a href="http://www.ymcaust.ac.in"
-					><img
-						id="jcboselogo"
-						src="./images/jcbose_chota.png"
-						alt="J C Bose Golden Jublee Logo"
-				/></a>
+		<div class="nav" id="navbar">
+			<span class="navbar-left" id="jcboselogo">
+				<a href="http://www.ymcaust.ac.in"><img src="./images/jcbose.png" alt="J C Bose Golden Jublee Logo" height="50px"></a>
 			</span>
-			<span onclick="history.back();" class="navbar-left"
+			<span onclick="back();" class="navbar-left"
 				><a
 					><img
 						id="back-arrow"
@@ -55,19 +80,14 @@
 						<span class="nav-button-bar-1"></span>
 					</label>
 				</div>
-				<!-- <li onclick="gotoslide(0,0);"><a>home</a></li> -->
-				<li onclick="gotoslide(1,0)"><a>about</a></li>
-				<li onclick="gotoslide(3,0)"><a>contact</a></li>
-				<li>
-					<a href="http://www.ymcaust.ac.in"
-						><img
-							id="ymcalogo"
-							src="./images/ymca_chota.png"
-							alt="JCBUST, YMCA  Logo"
-					/></a>
+				<li onclick="gotoslide(0,0);"><a>home</a></li>
+				<li onclick="gotoslide(3,0)"><a>about</a></li>
+				<li onclick="gotoslide(5,0)"><a>contact</a></li>
+				<li onclick="gotoslide(6,0)"><a>sponsors</a></li>
+				<li onclick="gotoslide(7,0)"><a>team</a></li>
+				<!-- <li onclick="gotoslide(1,5)"><a>event-details-page</a></li> -->
+				<li><a href="http://www.ymcaust.ac.in"><img id="ymcalogo" src="./images/ymca.png" alt="YMCA Logo" height="50px"><a>
 				</li>
-				<!-- <li onclick="gotoslide(6,0)"><a>sponsors</a></li>
-				<li onclick="gotoslide(7,0)"><a>team</a></li> -->
 			</ul>
 			<!-- right navigation bar ends -->
 		</div>
@@ -75,35 +95,444 @@
 
 		<div class="reveal">
 			<div class="slides">
-				<!-- slides for navbar links -->
-				<!-- coming soon page -->
-				<section data-background-image="images/bg/ec_back_2.jpg">
-					<img
-						id="eclogo"
-						src="./images/EC_logo.png"
-						alt="Elements Culmyca logo"
-					/>
-					<p class="logo-subheading-p">
-						The annual cultural and technical fest of JCBUST, YMCA
-					</p>
-					<!-- <h2 class="coming-soon">Coming Soon...</h2> -->
-					<div id="box">
-						<h2 class="timer" id="pg"></h2>
-					</div>
-					<p class="golden-jubilee-p">
-						The Golden Jubilee of J. C. Bose University of Science
-						and Technology, YMCA Faridabad
-					</p>
-					<!-- <span class="go-to-site" onclick="gotoslide(0,0);">
-						visit site
-					</span> -->
+				<!-- landing page -->
+				<section>
+					<section id="home-section" data-background-image="images/bg/home2.jpg">
+						<div class="elements-culmyca">
+							<span class="elements">elements</span>
+							<span class="_19">19</span>
+							<span class="culmyca">culmyca</span>
+							<p class="culmyca-subheading">The annual cultural and technical fest of JCBUST, YMCA</p>
+						</div>
+						<div class="links-to-subsections" >
+							<span class="gallery nav-link" onclick="Reveal.slide(0,1);">gallery</span>
+							<span class="register nav-link" onclick="Reveal.slide(0,2); resetRegisterationSlide();">register</span>
+							<span class="nav-link" onclick="Reveal.slide(1,0);">events</span>
+							<span class="nav-link" onclick="Reveal.slide(2,0);">starnight</span>
+						</div>
+
+						<!-- navigate to events -->
+						<div class="to-right big-navigation-link">events</div>
+					</section>
+
+					<!-- gallery section -->
+					<section id="gallery-section">
+						<!-- owl carousel for image gallery -->
+						<!-- <div class="customNavigation">
+							<a class="btn prev">Previous</a>
+							<a class="btn next">Next</a>
+						</div> -->
+						<div class="owl-carousel">
+							<div class="item"><img src="images/gallery/reduced/1.jpg"/></div>
+							<div class="item"><img src="images/gallery/reduced/2.jpg"/></div>
+							<div class="item"><img src="images/gallery/reduced/3.jpg"/></div>
+							<div class="item"><img src="images/gallery/reduced/4.jpg"/></div>
+							<div class="item"><img src="images/gallery/reduced/5.jpg"/></div>
+							<div class="item"><img src="images/gallery/reduced/6.jpg"/></div>
+							<div class="item"><img src="images/gallery/reduced/7.jpg"/></div>
+							<div class="item"><img src="images/gallery/reduced/8.jpg"/></div>
+							<div class="item"><img src="images/gallery/reduced/9.jpg"/></div>
+							<div class="item"><img src="images/gallery/reduced/10.jpg"/></div>
+							<div class="item"><img src="images/gallery/reduced/11.jpg"/></div>
+							<div class="item"><img src="images/gallery/reduced/12.jpg"/></div>
+							<div class="item"><img src="images/gallery/reduced/13.jpg"/></div>
+							<div class="item"><img src="images/gallery/reduced/14.jpg"/></div>
+							<div class="item"><img src="images/gallery/reduced/15.jpg"/></div>
+							<div class="item"><img src="images/gallery/reduced/16.jpg"/></div>
+						</div>
+					</section>
+
+					<!-- register section -->
+					<section id="registeration-section" data-background-image="images/bg/register.jpg">
+						<div id="registeration-form-container">
+							<form id="registeration-form">
+								<input type="text" name="name" size="35" placeholder="Full Name" onfocus="hideNavbar()" onfocusout="showNavbar()" required />
+								<br />
+								<input type="email" name="email" size="35" placeholder="Email" onfocus="hideNavbar()" onfocusout="showNavbar()" required />
+								<br />
+								<input type="text" minlength="10" maxlength="10" name="phone" size="35" placeholder="Phone Number (10 digit)" onfocus="hideNavbar()" onfocusout="showNavbar()" required />
+								<br />
+								<input type="text" name="college" size="35" placeholder="College Name" required />
+								<br />
+								<select name="event" id="events-list">
+									<option disabled>Select Event</option>
+								</select>
+								<!-- <select name="teamsize" id="teamsize-select" oninput="handleTeamMembersInputFields();">
+									<option value="0">Select Team Size</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+								</select> -->
+								<div id="teamMembersInputFormContainer">
+								</div>
+								<input type="submit" value="Register" id="registeration-register-button">
+							</form>
+							<div id="loading-gif-container" style="display: none;">
+								<img src="./images/loading.gif" alt="loading...">
+							</div>
+							<p id="registeration-msg" style="display: none;"></p></p>
+						</div>
+						<!-- navigate to events -->
+						<div class="to-right big-navigation-link">events</div>
+					</section>
+				</section>
+
+				<!-- events slide -->
+				<section id="events-section" data-background-image="images/bg/event.jpg">
+					<section>
+						<div class="events"><span class="events">events</span></div>
+						<div class="links-to-subsections ">
+							<span class="nav-link" onclick="Reveal.slide(1,1);">coding</span>
+							<span class="nav-link" onclick="Reveal.slide(1,2);">dance</span>
+							<span class="nav-link" onclick="Reveal.slide(1,3);">arts</span>
+							<span class="nav-link" onclick="Reveal.slide(1,4);">music</span>
+							<span class="nav-link" onclick="Reveal.slide(1,5);">drama</span>
+							<span class="nav-link" onclick="Reveal.slide(1,6);">automobiles</span>
+							<span class="nav-link" onclick="Reveal.slide(1,7);">electrical</span>
+							<span class="nav-link" onclick="Reveal.slide(1,8);">electronics</span>
+							<span class="nav-link" onclick="Reveal.slide(1,9);">literary</span>
+							<span class="nav-link" onclick="Reveal.slide(1,10);">photography&designing</span>
+							<span class="nav-link" onclick="Reveal.slide(1,11);">fun events</span>
+							<span class="nav-link" onclick="Reveal.slide(1,12);">mechanical</span>
+							<span class="nav-link" onclick="Reveal.slide(1,13);">social-cultural</span>
+							<span class="nav-link" onclick="Reveal.slide(1,14);">technofun</span>
+						</div>
+
+						<!-- navigate to starnight slide -->
+						<div class="to-right big-navigation-link">starnight</div>
+					</section>
+
+					<!-- coding events section -->
+					<section data-background-image="./images/bg/manan.jpg">
+						<div class="event-main-heading">
+							coding
+						</div>
+						<p class="category-details-p">
+							This category contains events related to competitive programming, problem-solving, web development, app development, and
+							similar topics. These events are organized by Manan, the computer society of JCBUST.
+						</p>
+						<div id="manan-events" class="links-to-subsections" ></div>
+						<!-- navigate to dance events slide -->
+						<div class="to-below big-navigation-link">dance</div>
+					</section>
+
+					<!-- dance events section -->
+					<section data-background-image="./images/bg/nataraja.jpg">
+						<div class="event-main-heading">
+							dance
+						</div>
+						<p class="category-details-p">
+							This category consists of dancing events filled with energy and enthusiasm awaits you. These events are organized by
+							Nataraja, the dancing society of JCBUST Faridabad.
+						</p>
+						<div id="nataraja-events" class="links-to-subsections" ></div>
+						<!-- navigate to arts events slide -->
+						<div class="to-below big-navigation-link">arts</div>
+					</section>
+
+					<!-- arts events section -->
+					<section data-background-image="./images/bg/srijan.jpg">
+						<div class="event-main-heading">
+							arts
+						</div>
+						<p class="category-details-p">
+							This category consists of events related to creative arts whose products are very appreciative for their imaginative,
+							aesthetic and intellectual content. These events will be organized by SRIJAN, the art society of JCBUST.
+						</p>
+						<div
+							id="srijan-events"
+							class="links-to-subsections"
+
+						></div>
+						<!-- navigate to music events slide -->
+						<div class="to-below big-navigation-link">music</div>
+					</section>
+
+					<!-- music events section -->
+					<section class="h100w100" data-background-image="./images/bg/tarannum.jpg">
+						<div class="event-main-heading">
+							music
+						</div>
+						<p class="category-details-p">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nisi enim soluta reiciendis cupiditate repellat a mollitia perspiciatis, voluptas recusandae, sit officiis quam animi.
+						</p>
+						<div id="taranuum-events" class="links-to-subsections" ></div>
+						<!-- navigate to drama events slide -->
+						<div class="to-below big-navigation-link">drama</div>
+					</section>
+
+					<!-- drama events section -->
+					<section class="h100w100" data-background-image="./images/bg/drama2.jpg">
+						<div class="event-main-heading">
+							drama
+						</div>
+						<p class="category-details-p">
+							This category consists of enthralling musicals, Nukkads and captivating acts performed by talented artists. These events
+							will be organized by Vividha, the dramatics society of JCBUST.
+						</p>
+						<div id="vividha-events" class="links-to-subsections" ></div>
+						<!-- navigate to automobiles events slide -->
+						<div class="to-below big-navigation-link">automobiles</div>
+					</section>
+
+					<!-- automobiles events section -->
+					<section class="h100w100" data-background-image="./images/bg/sae.jpg">
+						<div class="event-main-heading">
+							automobiles
+						</div>
+						<p class="category-details-p">
+							This category is for mechanics driven by accelerating passion for technology and automobiles. Various events, regarding
+							the same, will be organized by SAE club of JCBUST.
+						</p>
+						<div id="sae-events" class="links-to-subsections" ></div>
+						<!-- navigate to literary events slide -->
+						<div class="to-below big-navigation-link">electrical</div>
+					</section>
+
+					<!-- electrical events section -->
+					<section class="h100w100" data-background-image="./images/bg/samarpan.jpg">
+						<div class="event-main-heading">
+							electrical
+						</div>
+						<p class="category-details-p">
+							Nukkad Natak is a form of theatrical performance and
+							presentation in outdoor public space at the top of
+							their voice with enthusiastic and energetic music.
+							Feel closer to your roots by submerging in the art
+							from the past, which was lost somewhere in
+							urbanization.
+						</p>
+						<div id="samarpan-events" class="links-to-subsections"></div>
+						<!-- navigate to electronics events slide -->
+						<div class="to-below big-navigation-link">electronics</div>
+					</section>
+
+					<!-- electronics events section -->
+					<section class="h100w100" data-background-image="./images/bg/microbird.jpg">
+						<div class="event-main-heading">
+							electronics
+						</div>
+						<p class="category-details-p">
+							This category is for those who like being entangled between wires and circuits. Various events related to electronics
+							will be organized by various electronic societies of JCBUST.
+						</p>
+						<div id="microbird-events" class="links-to-subsections"></div>
+						<!-- navigate to literary events slide -->
+						<div class="to-below big-navigation-link">literary</div>
+					</section>
+
+					<!-- literary events section -->
+					<section class="h100w100" data-background-image="./images/bg/ananya.jpg">
+						<div class="event-main-heading">
+							literary
+						</div>
+						<p class="category-details-p">
+							This is for those who a literary and poetic essence to their art of writing. Ananya, The Unparalleled of JCBUST welcomes
+							organizes these events to unleash the poet within you.
+						</p>
+						<div id="ananya-events" class="links-to-subsections"></div>
+						<!-- navigate to photography & designing events slide -->
+						<div class="to-below big-navigation-link">photography&designing</div>
+					</section>
+
+					<!-- photography & designing events section -->
+					<section class="h100w100" data-background-image="./images/bg/jhalak2.jpg">
+						<div class="event-main-heading">
+							photography &designing
+						</div>
+						<p class="category-details-p">
+							Those willing to capture the beauty, the weirdness of nature and things around them should surely go for these events by
+							to show some camera skills accompanied with art. Jhalak the photography club of JCBUST organizes these events.
+						</p>
+						<div id="jhalak-events" class="links-to-subsections"></div>
+						<!-- navigate to fun events events slide -->
+						<div class="to-below big-navigation-link">fun events</div>
+					</section>
+
+					<!-- fun events events section -->
+					<section class="h100w100" data-background-image="./images/bg/eklavya.jpg">
+						<div class="event-main-heading">
+							fun events
+						</div>
+						<p class="category-details-p">
+							Events like LAN gaming, treasure hunts, etc and etc are to bring a sense of joy to create a fruitful experience during
+							the fest, every club has its own set of fun events.
+						</p>
+						<div id="eklavya-events" class="links-to-subsections"></div>
+						<!-- navigate to mechanical events slide -->
+						<div class="to-below big-navigation-link">mechanical</div>
+					</section>
+
+					<!-- mechanical events section -->
+					<section class="h100w100" data-background-image="./images/bg/mechnext.jpg">
+						<div class="event-main-heading">
+							mechanical
+						</div>
+						<p class="category-details-p">
+							For those, who have a keen interest in figuring out engines and making new and better ones with their mechanical skills
+							should visit, the mechanical events organized by MechNext society in JCBUST.
+						</p>
+						<div id="mechnext-events" class="links-to-subsections"></div>
+						<!-- navigate to social-cultural events slide -->
+						<div class="to-below big-navigation-link">social-cultural</div>
+					</section>
+
+					<!-- social-cultural events section -->
+					<section class="h100w100" data-background-image="./images/bg/vivekanand.jpg">
+						<div class="event-main-heading">
+							social-cultural
+						</div>
+						<p class="category-details-p">
+							Every club is willing to create an atmosphere where students interact, learn and have fun. So Social and Cultural events
+							aim to create a sense of integrity among students.
+						</p>
+						<div id="vivekanand-manch-events" class="links-to-subsections"></div>
+						<!-- navigate to technofun events slide -->
+						<div class="to-below big-navigation-link">technofun</div>
+					</section>
+
+					<!-- technofun events section -->
+					<section class="h100w100" data-background-image="./images/bg/ieee.jpg">
+						<div class="event-main-heading">
+							technofun
+						</div>
+						<p class="category-details-p">
+							Nukkad Natak is a form of theatrical performance and
+							presentation in outdoor public space at the top of
+							their voice with enthusiastic and energetic music.
+							Feel closer to your roots by submerging in the art
+							from the past, which was lost somewhere in
+							urbanization.
+						</p>
+						<div id="ieee-events" class="links-to-subsections"></div>
+						<!-- navigate to starnight slide -->
+						<div class="big-navigation-link" onclick="Reveal.slide(2,0);">starnight</div>
+					</section>
+
+
+
+
+
+					<!-- event details section -->
+					<section
+						id="event-details-section"
+						data-background-image="images/bg/register.jpg"
+					>
+						<div id="event-details-container">
+							<div id="ed-title" class="event-details-main-heading">
+								event name goes here
+							</div>
+							<div id="ed-id" style="display: none;"></div>
+							<h6 class="event-description-heading event-subheading">
+								Description
+							</h6>
+
+							<p id="ed-desc" class="event-description event-details-p">
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Consequatur alias obcaecati
+								sit nostrum excepturi ullam eaque, esse quisquam
+								et dicta harum exercitationem minima doloribus
+								cupiditate! Omnis sint quisquam velit. Nobis?
+							</p>
+
+							<h6 class="event-subheading">Event Type</h6>
+							<p id="ed-event-type" class="event-details-p">Solo</p>
+
+							<h6 class="event-rules-heading event-subheading">Rules</h6>
+							<p id="ed-rules" class="event-rules-p event-details-p event-details-p">
+								1. Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. lorem ipsum dolor sit. <br />
+								1. Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. lorem ipsum dolor sit. <br />
+								1. Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. lorem ipsum dolor sit. <br />
+								1. Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. lorem ipsum dolor sit. <br />
+								1. Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. lorem ipsum dolor sit.
+							</p>
+
+							<h6 class="event-subheading">Date and Time</h6>
+							<p id="ed-timing" class="event-details-p">
+								12pm (25th April, 2019) to
+								<!-- <br> -->
+								1pm (25th April, 2019)
+							</p>
+
+							<h6 class="event-subheading">Venue</h6>
+							<p id="ed-venue" class="event-details-p">CC-08</p>
+
+							<h6 class="event-subheading">Prizes</h6>
+								<p id="ed-prizes" class="event-details-p">
+									<!-- <span class="text-white">First: </span> <span id="ed-prize-first">Rs.500</span><br>
+									<span class="text-white">Second: </span> <span id="ed-prize-second">Rs.300</span> <br>
+									<span class="text-white">Third: </span> <span id="ed-prize-third">Rs. 100</span> -->
+							</p>
+
+							<h6 class="event-subheading">Coordinators</h6>
+								<p id="ed-coordinators" class="event-details-p"><span class="text-white"><span id="coord-1-name">Prince Batra</span></span> <span id="coord-1-phone">(9999988888)</span> <br>
+								<span class="text-white"><span id="coord-2-name">Prince Batra</span></span> <span
+										id="coord-2-phone">(9999988888)</span>
+							</p>
+
+							<input type="button" value="Register" onclick="goToRegister()" id="event-register-button">
+							<br>
+						</div>
+					</section>
+				</section>
+				<!-- starnight slide -->
+				<section id="starnight-section" data-background-image="images/bg/starnight.jpg">
+					<section
+						class="page-3"
+					>
+						<div class="starnight">
+							starnight
+						</div>
+						<br />
+						<div class="links-to-subsections">
+							<span class="starnight-temporary-text">will be updated shortly</span>
+							<!-- <span
+								class="day-1 nav-link"
+								onclick="Reveal.slide(2,1);"
+								>day_1</span
+							>
+							<span
+								class="day-2 nav-link"
+								onclick="Reveal.slide(2,2);"
+								>day_2</span
+							>
+							<span
+								class="day-3 nav-link"
+								onclick="Reveal.slide(2,3);"
+								>day_3</span
+							> -->
+						</div>
+
+						<div
+							class="big-navigation-link"
+							onclick="Reveal.slide(3,0);"
+						>about</div>
+					</section>
+
+					<!-- starnight day 1 section -->
+					<section>
+						starnight day 1
+					</section>
+
+					<!-- starnight day 2 section -->
+					<section>
+						starnight day 2
+					</section>
+
+					<!-- starnight day 3 section -->
+					<section>
+						starnight day 3
+					</section>
 				</section>
 
 				<!-- about ymca -->
-				<section
-					class="about-section"
-					data-background-image="images/bg/ec_back_2.jpg"
-				>
+				<section id="about-ymca-section" class="about-section" data-background-image="images/bg/about.jpg">
 					<div class="about-section-content">
 						<h1 class="about-heading-1">About</h1>
 						<h1 class="about-heading-2">JCBUST, YMCA</h1>
@@ -130,23 +559,15 @@
 							by NAAC. Our University has been mandated to
 							affiliate 50+ B.Tech and B.Ed institutions.
 						</p>
-						<div class="to-right big-navigation-link">
-							Culmyca
-						</div>
+						<div class="to-right big-navigation-link">Culmyca</div>
 					</div>
 				</section>
 
 				<!-- about culmyca -->
-				<section
-					class="about-section"
-					data-background-image="images/bg/ec_back_2.jpg"
-				>
+				<section id="about-culmyca-section" class="about-section" data-background-image="images/bg/about.jpg">
 					<div class="about-section-content">
 						<h1 class="about-heading-1">About</h1>
-						<h1
-							class="about-heading-2"
-							style="text-transform: none;"
-						>
+						<h1 class="about-heading-2" style="text-transform: none;">
 							Culmyca
 						</h1>
 						<p class="about-p">
@@ -169,16 +590,14 @@
 							all roads lead to just one destination: J. C. Bose
 							University Of Science and Technology, YMCA.
 						</p>
-						<div class="to-right big-navigation-link">
-							Contact
-						</div>
+						<div class="to-right big-navigation-link">Contact</div>
 					</div>
 				</section>
 
 				<!-- contact -->
-				<section data-background-image="images/bg/ec_back_2.jpg">
+				<section id="contact-section" data-background-image="images/bg/contact.jpg">
 					<div class="contact-container">
-						<br /><br />
+						<!-- Contact<br /><br /> -->
 						<div class="ymca">
 							<img
 								src="images/ymca_logo_white.png"
@@ -224,10 +643,111 @@
 							class="map"
 						></iframe>
 					</div>
-					<br />
-					<br />
-					<br />
-					<br />
+					<div class="to-right big-navigation-link">Sponsors</div>
+				</section>
+
+				<!-- sponsors -->
+				<section id="sponsors-section" data-background-image="images/bg/sponsors.jpg">
+					<span class="sponsors-temporary-text">Sponsors will be updated shortly.</span> <br /><br /><br /><br /><br /><br /><br /><br />
+					<!-- <div class="container">
+						<div class="container-images">
+							<img src="images/sponsors/1.jpeg" />
+						</div>
+						<div class="container-images">
+							<img src="images/sponsors/2.jpg" />
+						</div>
+						<div class="container-images">
+							<img src="images/sponsors/3.png" />
+						</div>
+						<div class="container-images">
+							<img src="images/sponsors/4.png" />
+						</div>
+					</div> -->
+					<div class="to-right big-navigation-link">Team</div>
+				</section>
+
+				<!-- team -->
+				<section
+					class="team"
+					id="team-section"
+					data-background-image="images/bg/team.jpg"
+				>
+					<div id="team-container">
+						Developing Team <br> <br>
+						<div class="team-img-container">
+							<img class="team-img" src="./images/team/dev/mohit.jpg" alt="">
+							<span class="team-img-title">Mohit Yadav</span>
+							<span class="team-img-description">Lead Web Developer</span>
+						</div>
+						<div class="team-img-container">
+							<img class="team-img" src="./images/team/dev/saagar.jpeg" alt="">
+							<span class="team-img-title">Saagar Verma</span>
+							<span class="team-img-description">Frontend Developer</span>
+						</div>
+						<div class="team-img-container">
+							<img class="team-img" src="./images/team/dev/prince.jpg" alt="">
+							<span class="team-img-title">Prince Batra</span>
+							<span class="team-img-description">Backend Developer</span>
+						</div>
+						<div class="team-img-container">
+							<img class="team-img" src="./images/team/dev/manmeet.jpg" alt="">
+							<span class="team-img-title">Manmeet</span>
+							<span class="team-img-description">Backend Developer</span>
+						</div>
+						<div class="team-img-container">
+							<img class="team-img" src="./images/team/dev/shubham.jpeg" alt="">
+							<span class="team-img-title">Shubham Sharma</span>
+							<span class="team-img-description">UI Designer</span>
+						</div>
+						<div class="team-img-container">
+							<img class="team-img" src="./images/team/dev/sahil.jpg" alt="">
+							<span class="team-img-title">Sahil Singla</span>
+							<span class="team-img-description">Backend Developer</span>
+						</div>
+						<br /> <br>
+						<!-- Oraganising Team <br> <br> -->
+						<!-- <div class="team-img-container">
+							<img class="team-img" src="./images/team/organisers/someone.jpg" alt="">
+							<span class="team-img-title">Someone</span>
+							<span class="team-img-description">lorem ipsum</span>
+						</div>
+						<div class="team-img-container">
+							<img class="team-img" src="./images/team/organisers/someone.jpg" alt="">
+							<span class="team-img-title">Someone</span>
+							<span class="team-img-description">lorem ipsum</span>
+						</div>
+						<div class="team-img-container">
+							<img class="team-img" src="./images/team/organisers/someone.jpg" alt="">
+							<span class="team-img-title">Someone</span>
+							<span class="team-img-description">lorem ipsum</span>
+						</div>
+						<div class="team-img-container">
+							<img class="team-img" src="./images/team/organisers/someone.jpg" alt="">
+							<span class="team-img-title">Someone</span>
+							<span class="team-img-description">lorem ipsum</span>
+						</div>
+						<div class="team-img-container">
+							<img class="team-img" src="./images/team/organisers/someone.jpg" alt="">
+							<span class="team-img-title">Someone</span>
+							<span class="team-img-description">lorem ipsum</span>
+						</div>
+						<div class="team-img-container">
+							<img class="team-img" src="./images/team/organisers/someone.jpg" alt="">
+							<span class="team-img-title">Someone</span>
+							<span class="team-img-description">lorem ipsum</span>
+						</div>
+						<div class="team-img-container">
+							<img class="team-img" src="./images/team/organisers/someone.jpg" alt="">
+							<span class="team-img-title">Someone</span>
+							<span class="team-img-description">lorem ipsum</span>
+						</div>
+						<div class="team-img-container">
+							<img class="team-img" src="./images/team/organisers/someone.jpg" alt="">
+							<span class="team-img-title">Someone</span>
+							<span class="team-img-description">lorem ipsum</span>
+						</div> -->
+						<br>
+					</div>
 				</section>
 			</div>
 			<!-- slides -->
@@ -243,12 +763,305 @@
 		<!-- <script src="./lib/js/head.min.js"></script> -->
 		<script src="./js/reveal.js"></script>
 		<script src="./js/revealConfig.js"></script>
+		<script src="./js/owl.carousel.min.js"></script>
 
 		<!-- custom cursor -->
 		<script src="./js/cursor.js"></script>
 		<!-- javascript -->
 		<script src="./js/script.js"></script>
-		<script src="./js/timer.js"></script>
-		<!-- timer -->
 	</body>
+	<script>
+		function myFunction(){
+
+		var y = $(window).width();
+		if (y > 600){
+
+		$('.line-1').css('width', '0%');
+		$('.line-1').css('width', '60%');
+		$('.line-2').css('width', '0%');
+		$('.line-2').css('width', '60%');
+		$('.preloader-top').css('animation-delay', '5.5s');
+		$('.preloader-bottom').css('animation-delay', '5.5s');
+
+		$('.line-1')
+		  .delay(800)
+		  .queue(function (next) {
+		    $(this).css({
+		    	transform: 'translate(0px, -15px)'
+		    });
+		    next();
+		  });
+
+		$('.line-2')
+		  .delay(800)
+		  .queue(function (next) {
+		    $(this).css({
+		    	transform: 'translate(0px, 15px)'
+		    });
+		    next();
+		  });
+
+		  $('.ec')
+		  .delay(900)
+		  .queue(function (next) {
+		    $(this).css({
+		    	visibility: 'visible',
+		    	opacity: '1'
+		    });
+		    next();
+		  });
+
+		  $('.line-1')
+		  .delay(800)
+		  .queue(function (next) {
+		    $(this).css({
+		    	transform: 'translate(0px, 140px)'
+		    });
+		    next();
+		  });
+
+		$('.line-2')
+		  .delay(800)
+		  .queue(function (next) {
+		    $(this).css({
+		    	transform: 'translate(0px, -150px)'
+		    });
+		    next();
+		  });
+
+		  $('.ec')
+		  .delay(800)
+		  .queue(function (next) {
+		    $(this).css({
+		    	visibility: 'visible',
+		    	opacity: '0',
+		    	transition: '0s'
+		    });
+		    next();
+		  });
+
+		  $('.ec')
+		  .delay(100)
+		  .queue(function (next) {
+		    $(this).css({
+		    	display: 'none'
+		    });
+		    next();
+		  });
+
+		$('.line-1')
+		  .delay(800)
+		  .queue(function (next) {
+		    $(this).css({
+		    	transform: 'translate(0px, 38px)'
+		    });
+		    next();
+		  });
+
+		$('.line-2')
+		  .delay(800)
+		  .queue(function (next) {
+		    $(this).css({
+		    	transform: 'translate(0px, -72px)'
+		    });
+		    next();
+		  });
+
+		  $('.ec-x')
+		  .delay(1800)
+		  .queue(function (next) {
+		    $(this).css({
+		    	visibility: 'visible',
+		    	opacity: '1',
+		    	transition: '.5s',
+		    	display: 'inline-block'
+		    });
+		    next();
+		  });
+
+		  $('.ec-x')
+		  .delay(600)
+		  .queue(function (next) {
+		    $(this).css({
+		    	visibility: 'visible',
+		    	opacity: '0',
+		    	transition: '.2s'
+		    });
+		    next();
+		  });
+
+		  $('.line-1')
+		  .delay(200)
+		  .queue(function (next) {
+		    $(this).css({
+		    	width: '100%',
+		    	transition: '.5s'
+		    });
+		    next();
+		  });
+
+		$('.line-2')
+		  .delay(200)
+		  .queue(function (next) {
+		    $(this).css({
+		    	width: '100%',
+		    	transition: '.5s'
+		    });
+		    next();
+		  });
+
+		  $('.loader')
+		  .delay(3200)
+		  .queue(function (next) {
+		    $(this).css({
+		    	display: 'none'
+		    });
+		    next();
+		  });
+
+		}
+
+		  var x = $(window).width();
+		  if (x < 600){
+
+		$('.line-1').css('width', '0%');
+		$('.line-1').css('width', '60%');
+		$('.line-2').css('width', '0%');
+		$('.line-2').css('width', '60%');
+		$('.preloader-top').css('animation-delay', '6s');
+		$('.preloader-bottom').css('animation-delay', '6s');
+
+			 $('.line-1')
+			  .delay(800)
+			  .queue(function (next) {
+			    $(this).css({
+			    	transform: 'translate(0px, -15px)'
+			    });
+			    next();
+			  });
+
+			$('.line-2')
+			  .delay(800)
+			  .queue(function (next) {
+			    $(this).css({
+			    	transform: 'translate(0px, 15px)'
+			    });
+			    next();
+			  });
+
+			  $('.ec')
+			  .delay(900)
+			  .queue(function (next) {
+			    $(this).css({
+			    	visibility: 'visible',
+			    	opacity: '1'
+			    });
+			    next();
+			  });
+
+			  $('.ec')
+			  .delay(800)
+			  .queue(function (next) {
+			    $(this).css({
+			 	visibility: 'hidden',
+			    	opacity: '0',
+			    	transition: '.5s',
+			    	display: 'none'
+			    });
+			    next();
+			  });
+
+			  $('.line-1')
+			  .delay(800)
+			  .queue(function (next) {
+			    $(this).css({
+			    	transform: 'translate(0px, 60px)'
+			    });
+			    next();
+			  });
+
+			$('.line-2')
+			  .delay(800)
+			  .queue(function (next) {
+			    $(this).css({
+			    	transform: 'translate(0px, -40px)'
+			    });
+			    next();
+			  });
+
+			  $('.ec-x')
+			  .delay(1850)
+			  .queue(function (next) {
+			    $(this).css({
+			    	visibility: 'visible',
+			    	opacity: '1',
+			    	transition: '.5s',
+			    	display: 'inline-block'
+			    });
+			    next();
+			  });
+
+			  $('.ec-x')
+			  .delay(550)
+			  .queue(function (next) {
+			    $(this).css({
+			    	visibility: 'hidden',
+			    	opacity: '0',
+			    	transition: '.2s'
+			    });
+			    next();
+			  });
+
+			$('.line-1')
+			  .delay(800)
+			  .queue(function (next) {
+			    $(this).css({
+			    	transform: 'translate(0px, 10px)'
+			    });
+			    next();
+			  });
+
+			$('.line-2')
+			  .delay(800)
+			  .queue(function (next) {
+			    $(this).css({
+			    	transform: 'translate(0px, -15px)'
+			    });
+			    next();
+			  });
+
+
+
+			  $('.line-1')
+			  .delay(200)
+			  .queue(function (next) {
+			    $(this).css({
+			    	width: '100%',
+			    	transition: '.5s'
+			    });
+			    next();
+			  });
+
+			$('.line-2')
+			  .delay(200)
+			  .queue(function (next) {
+			    $(this).css({
+			    	width: '100%',
+			    	transition: '.5s'
+			    });
+			    next();
+			  });
+
+			  $('.loader')
+			  .delay(3600)
+			  .queue(function (next) {
+			    $(this).css({
+			    	display: 'none'
+			    });
+			    next();
+			  });
+
+		  }
+	}
+	</script>
 </html>
