@@ -215,11 +215,15 @@ function addOnClickListenerToEventLinks() {
 
 					// set values
 					id.textContent = eventData._id;
-					title.textContent = eventData.title.toLowerCase();
-					desc.textContent = eventData.desc.toLowerCase();
-					eventType.textContent = eventData.eventtype.toLowerCase();
+					title.textContent = eventData.title;
+					desc.textContent = capitalizeFirstLetter(
+						eventData.desc.toLowerCase()
+					);
+					eventType.textContent = capitalizeFirstLetter(
+						eventData.eventtype.toLowerCase()
+					);
 					rules.textContent = eventData.rules.toLowerCase();
-					if (eventData.rules == "") {
+					if (eventData.rules == "" || eventData.rules == "na") {
 						rules.textContent = "NA";
 					}
 					timing.textContent = timeFrom + " to " + timeTo;
@@ -478,4 +482,8 @@ function resetRegisterationSlide() {
 		left: 0,
 		top: 0
 	});
+}
+
+function capitalizeFirstLetter(string) {
+	return string.charAt(0).toUpperCase() + string.slice(1);
 }

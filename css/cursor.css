@@ -13,6 +13,7 @@ input {
 	top: 0px;
 	left: 0px;
 	transition: transform 0s ease-out;
+	z-index: 1000;
 }
 /* cursor ends */
 
