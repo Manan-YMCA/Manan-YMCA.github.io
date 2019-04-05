@@ -140,7 +140,7 @@ function fetchEventNames() {
 					"<span class='nav-link event-link' data-id=" +
 						eventData._id +
 						">" +
-						eventData.title.toLowerCase() +
+						eventData.title +
 						"</span>"
 				);
 			});
@@ -185,7 +185,7 @@ function addOnClickListenerToEventLinks() {
 			})
 				.done(function(eventData) {
 					// redirect to event details section
-					Reveal.slide(1, 16);
+					Reveal.slide(1, 15);
 
 					console.log(eventData);
 					// get reference to html elements
@@ -216,18 +216,14 @@ function addOnClickListenerToEventLinks() {
 					// set values
 					id.textContent = eventData._id;
 					title.textContent = eventData.title;
-					desc.textContent = capitalizeFirstLetter(
-						eventData.desc.toLowerCase()
-					);
-					eventType.textContent = capitalizeFirstLetter(
-						eventData.eventtype.toLowerCase()
-					);
-					rules.textContent = eventData.rules.toLowerCase();
-					if (eventData.rules == "" || eventData.rules == "na") {
+					desc.innerHTML = eventData.desc.replace(/\n/g,"<br>");
+					eventType.textContent = eventData.eventtype;
+					rules.innerHTML = eventData.rules.replace(/\n/g,"<br>");
+					if (eventData.rules == "") {
 						rules.textContent = "NA";
 					}
 					timing.textContent = timeFrom + " to " + timeTo;
-					venue.textContent = eventData.venue.toLowerCase();
+					venue.textContent = eventData.venue;
 
 					var prizesInnerHTML = "";
 					if (
@@ -482,8 +478,4 @@ function resetRegisterationSlide() {
 		left: 0,
 		top: 0
 	});
-}
-
-function capitalizeFirstLetter(string) {
-	return string.charAt(0).toUpperCase() + string.slice(1);
 }
