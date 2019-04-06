@@ -398,6 +398,7 @@ function registerForEventEventListener() {
 			url: "https://culmyca19.herokuapp.com/register",
 			type: "POST",
 			data: {
+				name: name,
 				phone: phone,
 				email: email,
 				college: college,
