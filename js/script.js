@@ -185,7 +185,7 @@ function addOnClickListenerToEventLinks() {
 			})
 				.done(function(eventData) {
 					// redirect to event details section
-					Reveal.slide(1, 15);
+					Reveal.slide(1, 16);
 
 					console.log(eventData);
 					// get reference to html elements
