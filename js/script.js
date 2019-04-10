@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		document.getElementById("registeration-form-container")
 	);
 	new PerfectScrollbar(document.querySelector("#team-container"));
+	new PerfectScrollbar(document.querySelector("#sponsors-images-container"));
 
 	fetchEventNames();
 
