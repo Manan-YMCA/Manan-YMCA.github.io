@@ -133,13 +133,6 @@
 	z-index: +1000 !important;
 }
 
-/*.line-y {
-	border: 1px solid white;
-	background-color: white;
-	z-index: 999;
-	margin-bottom: 20px;
-	margin-top: 0px;
-}*/
 
 .line-1 {
 	display: inline-block;
@@ -168,30 +161,19 @@
 	transition: visibility 0s, opacity 0.5s linear;
 	display: inline-block;
 	font-family: "Raleway", sans-serif;
-	/*-webkit-text-stroke: 2px black;*/
 	text-shadow: 0px 0px 10px black;
 	font-weight: bold;
 }
 
 .ec-x {
 	font-size: 100px;
-	/*color: black;*/
-	background: -webkit-linear-gradient(red, #d0d0d0, green);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: black;
 	visibility: hidden;
 	opacity: 0;
 	transition: visibility 0s, opacity 0.5s linear;
 	display: none;
 	transition: 0.5s;
 	font-family: "Raleway", sans-serif;
-	/*font-weight: bold;*/
-	/*font-family: 'Baloo Tamma', cursive;*/
-	/*-webkit-text-stroke: 1px black;*/
-	/*text-shadow: 0px 0px 20px black;*/
-	/*	text-shadow: -1px -1px 0px $clr-blue,
-    3px 3px 0px $clr-blue,
-    6px 6px 0px $clr-blue-900;*/
 }
 
 .elements-loader {
@@ -291,15 +273,13 @@
 	text-align: center;
 }
 
-.team-img-container,
-.sponsor-img-container {
+.team-img-container {
 	display: inline-block !important;
 	padding: 0 20px !important;
 	margin-bottom: 20px !important;
 }
 
-.team-img,
-.sponsor-img {
+.team-img {
 	height: 140px;
 	width: 140px;
 	border-radius: 50%;
@@ -307,19 +287,15 @@
 	border: 2px solid rgb(231, 141, 33) !important;
 }
 .team-img-title,
-.sponsor-name,
-.team-img-description,
-.sponsor-description {
+.team-img-description {
 	display: block;
 	font-family: "Raleway", sans-serif !important;
 	text-align: center;
 }
-.team-img-title,
-.sponsor-name {
+.team-img-title {
 	font-size: 18px !important;
 }
-.team-img-description,
-.sponsor-description {
+.team-img-description {
 	font-size: 14px !important;
 }
 
@@ -327,18 +303,15 @@
 	.team-img-container {
 		margin-bottom: 100px !important;
 	}
-	.team-img,
-	.sponsor-img {
+	.team-img {
 		height: 280px;
 		width: 280px;
 		border-radius: 50%;
 	}
-	.team-img-title,
-	.sponsor-name {
+	.team-img-title {
 		font-size: 42px !important;
 	}
-	.team-img-description,
-	.sponsor-description {
+	.team-img-description {
 		font-size: 32px !important;
 	}
 }
@@ -346,6 +319,24 @@
 /*Team Page Ends*/
 
 /*Sponsors page */
+
+.container-images {
+	display: inline-block;
+	width: 25%;
+	height: 25%;
+}
+.sponsors-temporary-text {
+	font-size: 21px !important;
+}
+@media screen and (max-width: 600px) {
+	.sponsors-temporary-text {
+		font-size: 32px !important;
+	}
+}
+/*.container-images img {
+	width: 100%;
+	height: 60%;
+}*/
 
 /*Sponsors page ends*/
 
@@ -980,8 +971,7 @@
 
 #event-details-container,
 #team-container,
-#registeration-form-container,
-#sponsors-images-container {
+#registeration-form-container {
 	height: calc(65vh) !important;
 	width: 100%;
 	position: relative;
@@ -990,9 +980,7 @@
 }
 
 #event-details-section,
-#team-container,
-#sponsors-images-container {
-	overflow-x: hidden;
+#team-container {
 	margin-top: 10%;
 	padding-bottom: 200px;
 	width: 100%;
@@ -1015,8 +1003,7 @@
 
 @media screen and (max-width: 600px) {
 	#event-details-section,
-	#team-container,
-	#sponsors-images-container {
+	#team-container {
 		padding-top: 0 !important;
 		margin-top: -20% !important;
 	}
@@ -1026,8 +1013,7 @@
 	#event-details-container {
 		height: 175vh !important;
 	}
-	#team-container,
-	#sponsors-images-container {
+	#team-container {
 		height: 170vh !important;
 	}
 	.event-description-heading,
@@ -1288,9 +1274,6 @@ button {
 	.loading {
 		padding-top: 280px;
 		font-size: 20px;
-	}
-
-	.loader {
 	}
 
 	/*----------  next section  ----------*/
